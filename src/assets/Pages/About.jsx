@@ -1,5 +1,5 @@
 import "./About.scss";
-import aboutImg from "../Images/AboutImg.jpg";
+import aboutImg from "/Images/AboutImg.jpg";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import { FaCheckCircle, FaLeaf, FaSmile, FaStar } from "react-icons/fa";
@@ -81,7 +81,7 @@ export default function About() {
         </div>
       </div>
 
-      {/* 🌟 WHY US SECTION - SEPARATE DIV WITHOUT BACKGROUND IMAGE */}
+      {/*  WHY US SECTION - SEPARATE DIV WITHOUT BACKGROUND IMAGE */}
       <div className="why-section">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

@@ -10,17 +10,17 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-import hero from "../Images/hero.jpg";
-import Img1 from "../Images/Img1.jpg";
-import Birthday from "../Images/Birthday.avif"
+import hero from "/Images/hero.jpg";
+import Img1 from "/Images/Img1.jpg";
+import Birthday from "/Images/Birthday.avif"
 
-import dish1 from "../Images/dish1.jpeg";
-import dish2 from "../Images/dish2.jpg";
-import dish3 from "../Images/dish3.webp";
-import dish4 from "../Images/dish4.jpeg";
-import dish5 from "../Images/dish5.jpeg";
-import dish6 from "../Images/dish6.jpg";
-import dish7 from "../Images/dish7.webp";
+import dish1 from "/Images/dish1.jpeg";
+import dish2 from "/Images/dish2.jpg";
+import dish3 from "/Images/dish3.webp";
+import dish4 from "/Images/dish4.jpeg";
+import dish5 from "/Images/dish5.jpeg";
+import dish6 from "/Images/dish6.jpg";
+import dish7 from "/Images/dish7.webp";
 
 export default function Home() {
   useEffect(() => {

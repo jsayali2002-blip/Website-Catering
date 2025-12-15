@@ -1,20 +1,20 @@
 import DishCard from "../Componenets/DishCard.jsx";
 import "./Menu.scss";
 
-import dish1 from "../Images/dish1.jpeg";
-import dish2 from "../Images/dish2.jpg";
-import dish3 from "../Images/dish3.webp";
-import dish4 from "../Images/dish4.jpeg";
-import dish5 from "../Images/dish5.jpeg";
-import dish6 from "../Images/dish6.jpg";
-import dish7 from "../Images/dish7.webp";
-import dish8 from "../Images/dish8.jpg";
-import dish9 from "../Images/dish9.webp";
-import dish10 from "../Images/dish10.webp";
-import dish11 from "../Images/dish11.jpg";
-import dish12 from "../Images/dish12.jpeg";
-import dish13 from "../Images/dish13.avif";
-import dish14 from "../Images/dish14.jpeg";
+import dish1 from "/Images/dish1.jpeg";
+import dish2 from "/Images/dish2.jpg";
+import dish3 from "/Images/dish3.webp";
+import dish4 from "/Images/dish4.jpeg";
+import dish5 from "/Images/dish5.jpeg";
+import dish6 from "/Images/dish6.jpg";
+import dish7 from "/Images/dish7.webp";
+import dish8 from "/Images/Dish8.jpg";
+import dish9 from "/Images/dish9.webp";
+import dish10 from "/Images/dish10.webp";
+import dish11 from "/Images/dish11.jpg";
+import dish12 from "/Images/dish12.jpeg";
+import dish13 from "/Images/dish13.avif";
+import dish14 from "/Images/dish14.jpeg";
 
 const dishes = [
   {

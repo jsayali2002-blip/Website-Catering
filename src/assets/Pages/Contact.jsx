@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Contact.scss";
-import Offer from "../Images/offer.jpg"; // Make sure this path is correct
+
+import Offer from "/Images/Offer.jpg";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -49,10 +50,18 @@ export default function Contact() {
         </form>
 
         <div className="contact-icons">
-          <a href="#"><i className="fab fa-facebook-f"></i></a>
-          <a href="#"><i className="fab fa-twitter"></i></a>
-          <a href="#"><i className="fab fa-linkedin-in"></i></a>
-          <a href="mailto:info@example.com"><i className="fas fa-envelope"></i></a>
+          <a href="#">
+            <i className="fab fa-facebook-f"></i>
+          </a>
+          <a href="#">
+            <i className="fab fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i className="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:info@example.com">
+            <i className="fas fa-envelope"></i>
+          </a>
         </div>
       </div>
 
@@ -101,11 +110,7 @@ export default function Contact() {
               cancel at any time.
             </p>
             <form onSubmit={handleSubscribe}>
-              <input
-                type="email"
-                required
-                placeholder="Enter your email..."
-              />
+              <input type="email" required placeholder="Enter your email..." />
               <button type="submit">SUBSCRIBE TODAY!</button>
             </form>
             {subscribed && <p className="success-msg">Subscribed! ✅</p>}
