@@ -1,0 +1,382 @@
+$primary-color: #ffd700;
+
+.about-section {
+  position: relative;
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 4rem 3.5rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+
+  &:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.45);
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+    transition: background 0.5s ease;
+  }
+
+  .about-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+    margin: 0 auto;
+    transition: all 0.5s ease;
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: $primary-color;
+      margin-bottom: 1.5rem;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s, text-shadow 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+        text-shadow: 0 0 15px rgba(255, 223, 0, 0.6);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 4px;
+        width: 70px;
+        border-radius: 2px;
+        background: $primary-color;
+        box-shadow: 0 3px 8px rgba(255, 215, 0, 0.5);
+        transition: all 0.5s ease;
+      }
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 1.2rem;
+      margin: 0.7rem auto 1rem auto;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    .highlight {
+      font-weight: 600;
+      color: #ffecb3;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 1rem 1.5rem;
+      border-left: 6px solid $primary-color;
+      border-radius: 0.5rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+      cursor: pointer;
+      transition: all 0.4s ease;
+
+      &:hover {
+        transform: translateY(-5px) scale(1.03);
+        background: rgba(0, 0, 0, 0.45);
+        color: #fff8c0;
+        box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+        border-left-color: $primary-color;
+      }
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
+
+      .stat {
+        background: rgba(0,0,0,0.25);
+        padding: 1rem 1.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        &:hover {
+          transform: translateY(-5px) scale(1.02);
+          box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+        }
+
+        h2 {
+          font-size: 2rem;
+          margin-bottom: 0.3rem;
+          color: $primary-color;
+        }
+
+        p {
+          font-size: 1rem;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 3rem 2rem;
+
+    .about-content {
+      h1 { font-size: 2.2rem; }
+      p { font-size: 1.05rem; }
+      .highlight { padding: 0.8rem 1rem; }
+      .stats .stat { h2 { font-size: 1.5rem; } }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 2rem 1.5rem;
+
+    .about-content {
+      h1 { font-size: 1.8rem; }
+      p { font-size: 0.95rem; }
+    }
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(25px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+/* 🔥 Super Modern Animated Why Us Section */
+.why-section {
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #f1f4f9, #e0e5ec);
+  text-align: center;
+}
+
+.why-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: fadeDown 1s forwards;
+}
+
+/* Grid */
+.why-us {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+}
+
+/* 🔥 Animated Cards */
+.why-card {
+  background: rgba(255, 255, 255, 0.55);
+  padding: 35px 25px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.4s ease;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1.2s forwards;
+  animation-delay: var(--delay);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating animation */
+.why-card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Neon Glow Border Animation */
+.why-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 2px;
+  background: linear-gradient(
+    130deg,
+    #ffb300,
+    #ff7b00,
+    #ffd000,
+    #ff9d00
+  );
+  background-size: 400% 400%;
+  animation: borderGlow 6s infinite ease;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.why-card:hover::before {
+  opacity: 1;
+}
+
+.why-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: white;
+  z-index: 0;
+}
+
+.why-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Icon Animations */
+.why-icon {
+  font-size: 48px;
+  color: #ff9800;
+  margin-bottom: 20px;
+  transition: 0.4s ease;
+}
+
+.why-card:hover .why-icon {
+  transform: rotate(10deg) scale(1.2);
+  filter: drop-shadow(0 5px 10px rgba(255, 153, 0, 0.4));
+}
+
+.why-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #333;
+  font-weight: 600;
+}
+
+.why-card p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Fade + Slide In Animations */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Neon Border Animation */
+@keyframes borderGlow {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+
+
+/* Delivery Section */
+.delivery-section {
+  padding: 60px 40px;
+  background: #ffffff;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.delivery-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #333;
+}
+
+.delivery-logos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.delivery-card {
+  background: #fafafa;
+  padding: 25px 35px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: 0.4s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card Hover Floating Animation */
+.delivery-card:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+/* Brand glow */
+.zomato:hover {
+  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.5);
+}
+
+.swiggy:hover {
+  box-shadow: 0 10px 25px rgba(255, 140, 0, 0.5);
+}
+
+/* ICON ROTATE + SCALE ANIMATION */
+.delivery-card img {
+  height: 65px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  transform-origin: center;
+}
+
+/* Hover animation: scale + rotate */
+.delivery-card:hover img {
+  transform: scale(1.2) rotate(10deg);
+  filter: drop-shadow(0px 5px 12px rgba(0, 0, 0, 0.25));
+}
+
+.delivery-text {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #444;
+  font-weight: 500;
+}

@@ -1,0 +1,206 @@
+$primary-color: #f59e0b;
+$primary-hover: #b45309;
+
+.home {
+  /* Hero Slider */
+  .hero-slider {
+    .hero {
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+
+      .overlay {
+        background: rgba(155, 141, 141, 0.45);
+        padding: 2.5rem;
+        text-align: center;
+        // color: white;
+        border-radius: 0.75rem;
+        backdrop-filter: blur(6px);
+        // border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        transition: all 0.35s ease;
+        transform: translateY(0);
+        &:hover {
+          transform: scale(1.05);
+          // color: #a7a18e;
+        }
+
+        h1 {
+          font-size: 3rem;
+          margin-bottom: 1rem;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
+          cursor: pointer;
+
+          &:hover {
+            transform: scale(1.05);
+            color: #fcd34d;
+            text-shadow: 0 0 15px rgba(255, 223, 0, 0.6);
+          }
+        }
+
+        p {
+          font-size: 1.2rem;
+          margin-bottom: 2rem;
+          opacity: 0.9;
+        }
+
+        .btn {
+          background: $primary-color;
+          color: white;
+          padding: 0.75rem 1.5rem;
+          border-radius: 0.5rem;
+          text-decoration: none;
+          font-weight: 600;
+          transition: background 0.3s, transform 0.3s;
+
+          &:hover {
+            background: $primary-hover;
+            transform: translateY(-3px) scale(1.05);
+          }
+        }
+      }
+    }
+  }
+
+  /* Services Section */
+  .services {
+    padding: 4rem 2rem;
+    text-align: center;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .cards {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .card {
+        background: linear-gradient(145deg, #fff, #fef3c7);
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.4s ease, box-shadow 0.4s ease,
+          background 0.4s ease;
+
+        &:hover {
+          transform: translateY(-10px) scale(1.05);
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+          background: linear-gradient(145deg, $primary-color, #fcd34d);
+        }
+
+        .icon {
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+          display: inline-block;
+          transition: transform 0.4s ease, color 0.4s ease;
+          color: $primary-color;
+
+          &:hover {
+            transform: rotate(10deg) scale(1.2);
+            color: $primary-hover;
+          }
+        }
+
+        h3 {
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+          transition: color 0.3s;
+        }
+
+        p {
+          font-size: 1rem;
+          color: #555;
+        }
+
+        &:hover h3 {
+          color: $primary-hover;
+        }
+      }
+    }
+  }
+
+  /* Menu Preview Section */
+  .menu-preview {
+    padding: 4rem 2rem;
+    text-align: center;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .menu-items {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 2rem;
+
+      .menu-card {
+        img {
+          border-radius: 0.75rem;
+          width: 250px;
+          height: 180px;
+          object-fit: cover;
+          transition: transform 0.3s, box-shadow 0.3s;
+
+          &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+    }
+
+    .view-full {
+      display: inline-block;
+      background: $primary-color;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.3s;
+
+      &:hover {
+        background: $primary-hover;
+        transform: translateY(-3px) scale(1.05);
+      }
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-slider .hero {
+      height: 60vh;
+
+      .overlay {
+        padding: 1.5rem;
+
+        h1 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .services .cards,
+    .menu-preview .menu-items {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
